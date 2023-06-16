@@ -18,14 +18,13 @@ public class Repaso2_1 {
                 acumulador = acumulador + nota;
                 notas[i][j] = nota;
             }
-
         }
 
         for(int i = 0; i < 5; i ++){
             acumulador = 0;
             System.out.print("Nombre: " + nombres[i]);
             for(int j = 0; j < 3; j ++){
-                acumulador1 = acumulador1 + notas[i][j];
+                acumulador = acumulador + notas[i][j];
                 System.out.printf(" Nota%d: %d", j + 1, notas[i][j]);
             }
             System.out.printf(" Promedio: %.2f", acumulador / 3);
