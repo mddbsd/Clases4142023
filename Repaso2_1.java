@@ -15,14 +15,13 @@ public class Repaso2_1 {
                     System.out.println("ingrese nota " + (j + 1));
                     nota = Integer.parseInt(System.console().readLine());
                 }
-                acumulador = acumulador + nota;
                 notas[i][j] = nota;
             }
         }
 
         for(int i = 0; i < 5; i ++){
             acumulador = 0;
-            System.out.print("Nombre: " + nombres[i]);
+            System.out.printf("Nombre: %s", nombres[i]);
             for(int j = 0; j < 3; j ++){
                 acumulador = acumulador + notas[i][j];
                 System.out.printf(" Nota%d: %d", j + 1, notas[i][j]);
