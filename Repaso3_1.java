@@ -15,15 +15,24 @@ public class Repaso3_1 {
                 MuestraStocks(prods, prodsVal);
                 break;
             case 2:
-                //crear funcion para mostrar costos
+                MuestraCostos(prods, prodsVal);
                 break;
             case 3:
-                MuestraStocks(prods, prodsVal);
+                MuestraStockCostos(prods, prodsVal);
                 break;
             default:
 
         } 
-    }
+    }//TERMINA LA FUNCION MAIN
+
+    //CONMIENZA LA DECLARACION  DE FUNCIONES
+
+    public static void MuestraStocks(String fProds[], double fProdsVal[][]){
+        for(int i = 0; i < 3; i++){
+            System.out.printf("Producto: %s Stock: %.0f\n", fProds[i], fProdsVal[i][1]);                    
+        }
+    } 
+    
     public static int MostrarMenu(){
         System.out.println("***Menu de opciones***");
         System.out.println("1: mostrar productos y stock");
@@ -32,9 +41,16 @@ public class Repaso3_1 {
         return Integer.parseInt(System.console().readLine());
     }
     
-    public static void MuestraStocks(String fProds[], double fProdsVal[][]){
+    public static void MuestraCostos(String pepe[], double pepaPig[][]){
         for(int i = 0; i < 3; i++){
-            System.out.printf("Producto: %s Stock: %.0f\n", fProds[i], fProdsVal[i][1]);                    
+            System.out.printf("Producto: %s Costo: %.0f\n", pepe[i], pepaPig[i][0]);
         }
-    }    
+    }
+
+    public static void MuestraStockCostos(String ricardo[], double ford[][]){
+        for(int i = 0; i < 3; i++){
+            System.out.printf("Prodcuto: %s Stock: %.0f Costo: %.0f\n",ricardo[i], ford[i][1], ford[i][0]);
+        }
+    }
+
 }
